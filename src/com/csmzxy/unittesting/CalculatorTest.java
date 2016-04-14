@@ -44,7 +44,7 @@ public class CalculatorTest {
 	 */
 	@Test
 	public void testSubInt() {
-		fail("Not yet implemented");
+		assertEquals(1-2,cal.subInt(1, 2));
 	}
 
 	/**
@@ -52,7 +52,7 @@ public class CalculatorTest {
 	 */
 	@Test
 	public void testMultiInt() {
-		fail("Not yet implemented");
+		assertEquals(1*2,cal.multiInt(1, 2));
 	}
 
 	/**
@@ -60,7 +60,8 @@ public class CalculatorTest {
 	 */
 	@Test
 	public void testDivInt() {
-		fail("Not yet implemented");
+		assertEquals(4/2,cal.divInt(4, 2));
+		cal.divInt(10, 0);
 	}
 
 	/**
@@ -68,7 +69,11 @@ public class CalculatorTest {
 	 */
 	@Test
 	public void testCalculateTrangle() {
-		fail("Not yet implemented");
+		assertEquals("a、b、c应为正整数！",cal.calculateTrangle(-1, 0, 2));
+		assertEquals("非三角形",cal.calculateTrangle(2, 6, 9));
+		assertEquals("等边三角形",cal.calculateTrangle(6, 6, 6));
+		assertEquals("等腰三角形",cal.calculateTrangle(5, 8, 8));
+		assertEquals("一般三角形",cal.calculateTrangle(3, 4, 5));
 	}
 
 }
